@@ -24,6 +24,10 @@ module GrpcMock
       GrpcMock::MockedOperation.new(self, metadata, deadline)
     end
 
+    def interceptable
+      true
+    end
+
     private
 
     def sanitize_metadata(metadata)
